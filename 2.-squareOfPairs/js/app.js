@@ -4,18 +4,28 @@
 
 // declara las variables ES5
 
-var array = [2, 4, 6];
-// var array = [-3, 2, -8, 12, 5];
+//var number = [2, 4, 6];
+var number = [-3, 2, -8, 12, 5];
 // var array = [1, 2, 3, 4, 5];
 
 
-// declaración de la funcion 
+// declaración de la funcion
 
-function square () {
+function square(array) {
   // escribe tu código aqui...
-}
+  var squareNumber = array.map(function(number){
+    if(number > 0){
+      return number * number;
+    } else {
+      return number
+    }
 
-square(array);
+
+  })
+    return squareNumber
+}
+console.log(square(number));
+
 
 
                       //  ES6
@@ -36,5 +46,4 @@ square(array);
 
 
 
-// ejecuta la funcion 
-
+// ejecuta la funcion
