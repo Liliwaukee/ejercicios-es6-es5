@@ -1,6 +1,6 @@
-                            // ES5
 
-// declara la variable
+// ES5 ------------------------------------------------------
+//
 /*
 var computeSumOfAllElements = function(array){
   var totalSum = 0;
@@ -15,18 +15,16 @@ var numbers = [10, 20, 30, 20, 30, 40, 60];
 console.log(computeSumOfAllElements(numbers));
 */
 
-//imprimir en consola el mensaje... "El promedio de este arreglo es: 30" "210"
-//ES6
-// Comenta todo lo anterior y escribelo en ES6
+// ES6 ------------------------------------------------------
+//
 
 const computeSumOfAllElements = array => {
-
 
   let sumTotal = 0;
   for (let value of array) {
     sumTotal += value
   }
-  return sumTotal/array.length
+  return `El promedio de este arreglo es: ${sumTotal/array.length}`
 }
 
 var numbers = [10, 20, 30, 20, 30, 40, 60];

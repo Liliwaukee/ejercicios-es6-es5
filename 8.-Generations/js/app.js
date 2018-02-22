@@ -1,14 +1,27 @@
-                        // ES5
+// ES5 ------------------------------------------------------
+//
 
+var containerData = document.getElementById("data-container")
+
+
+var btnGenerationNumber = document.getElementById("generation-number");
+var btnStudents = document.getElementById("students");
+var btnAgeAverage = document.getElementById("age-average");
+var btnPopularName = document.getElementById("popular-name");
+var btnTotalStudents= document.getElementById("total-students");
+var btnTotalAgeAverage = document.getElementById("total-age-average");
+var btnMostPopularName = document.getElementById("most-popular-name");
 
 // 1.1- Mostrar en la consola un mensaje que diga... "El numero de generaciones es (numero de generaciones en total)"
 
 var generations = function(data){
   var numberOfGenerations = Object.keys(data.generaciones).length;
-  return "El número de generaciones es: " + numberOfGenerations;
+  var dataInfo = document.createElement("p");
+  containerData.appendChild(dataInfo);
+  dataInfo.innerHTML = "El número de generaciones es: " + numberOfGenerations;
 }
 
-console.log(generations(laboratoria));
+btnGenerationNumber.addEventListener("click", generations(laboratoria));
 
 
 
@@ -17,12 +30,13 @@ console.log(generations(laboratoria));
 var studentsGenerations = function(data) {
   for (generation in data.generaciones) {
     var students = data.generaciones[generation].alumnas;
-    console.log("La " + generation + " generación tuvo " + students + " alumnas");
+    var studentsGenerationPrint = document.createElement("p");
+    containerData.appendChild(studentsGenerationPrint);
+    studentsGenerationPrint.innerHTML = "La " + generation + " generación tuvo " + students + " alumnas";
   }
 }
-studentsGenerations(laboratoria)
-//console.log(studentsGenerations(laboratoria));
-//laboratoria.generaciones.primera.alumnas
+btnStudents.addEventListener("click", studentsGenerations(laboratoria));
+
 
 
 // 1.3- Mostrar en la consola un mensaje que diga "El promedio de edad de la (numero de generacion) generacion es de (promedio de numero de alumas en la generacion)" [un mensaje por generacion]
@@ -107,23 +121,13 @@ var mostPopularName = function(data) {
 console.log(mostPopularName(laboratoria));
 
 
+
+
 // Alcance 3....
 
 // Crear botones para disparar cada uno de los puntos y pintarlos por medio del DOM
 
 
-var containerData = document.getElementById("data-container")
-var dataInfo = document.createElement("p");
-containerData.appendChild(dataInfo);
-
-
-var btnGenerationNumber = document.getElementById("generation-number");
-var btnStudents = document.getElementById("students");
-var btnAgeAverage = document.getElementById("age-average");
-var btnPopularName = document.getElementById("popular-name");
-var btnTotalStudents= document.getElementById("total-students");
-var btnTotalAgeAverage = document.getElementById("total-age-average");
-var btnMostPopularName = document.getElementById("most-popular-name");
 
 
 
