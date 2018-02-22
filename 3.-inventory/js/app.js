@@ -1,4 +1,3 @@
-// En este ejercicio te ayudaremos con la solucion de ES5, solo tendras que pasarlo a ES6
 
 const inventory = [
   { name: "Inka Cola", category: "beverage", stock: "10" },
@@ -14,6 +13,9 @@ const inventory = [
   { name: "Arándonos", category: "fruit", stock: "19" },
   { name: "Ciruela", category: "fruit", stock: "8" }
 ];
+
+// ES5 ------------------------------------------------------
+//
 /*
 var totalByCategory = function(inventory, category) {
   var filterCategory = function filterCategory(prod) {
@@ -32,9 +34,10 @@ var totalByCategory = function(inventory, category) {
 totalByCategory(inventory, "beverage");
 */
 
-// Comenta todo el código de arriba (ecepto la const inventory) y pasa el código a ES6
 
 
+// ES6 ------------------------------------------------------
+//
 const totalByCategory = (inventory, category) => {
   const filterCategory = prod => {
     let totalProd = prod.category === category;
@@ -50,12 +53,3 @@ const totalByCategory = (inventory, category) => {
 }
 
 totalByCategory(inventory, "beverage");
-
-/*
-const capitalize = str => {
-  const array = str.split(``);
-  const newArray = array.map(item => item.toUpperCase());
-  let newStr = newArray.join(``);
-  return newStr
-}
-*/

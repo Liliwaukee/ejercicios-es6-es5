@@ -1,49 +1,43 @@
-// 3 variables llamadas igual para hacer 3 pruebas (usa una variable y las otras 2 comentalas)
 
-                                // ES5
-
-// declara las variables ES5
+// ES5 ------------------------------------------------------
+//
+/*
+function square(array) {
+  var squareArray = [];
+  for(var i = 0; i < array.length; i++){
+    if(array[i] > 0){
+      squareArray.push(array[i] * array[i]);
+    } else {
+      squareArray.push(array[i])
+    }
+  }
+  return squareArray
+}
 
 //var number = [2, 4, 6];
 var number = [-3, 2, -8, 12, 5];
-// var array = [1, 2, 3, 4, 5];
+// var number = [1, 2, 3, 4, 5];
 
+console.log(square(number));
+*/
 
-// declaración de la funcion
+// ES6 ------------------------------------------------------
+//
 
-function square(array) {
-  // escribe tu código aqui...
-  var squareNumber = array.map(function(number){
+const square = array => {
+  let squareNumber = array.map(number => {
     if(number > 0){
       return number * number;
     } else {
       return number
     }
-
-
   })
-    return squareNumber
+  return squareNumber
 }
+
+
+//var number = [2, 4, 6];
+var number = [-3, 2, -8, 12, 5];
+// var number = [1, 2, 3, 4, 5];
+
 console.log(square(number));
-
-
-
-                      //  ES6
-
-// Ahora comenta todo el codigo de arriba y escribelo en ES6
-
-
-// declara variables (let-const)
-
-
-// declara la funcion y ejecuta el código
-
-
-
-
-
-
-
-
-
-// ejecuta la funcion
